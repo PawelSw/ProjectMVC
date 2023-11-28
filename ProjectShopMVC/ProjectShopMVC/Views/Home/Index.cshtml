@@ -1,0 +1,20 @@
+﻿@model HomeViewModel
+
+<partial name="_Carousel" />
+
+
+<div class="text-center">
+    <br />
+    <h1>Projects of the week</h1>
+
+    <div class="row projects-of-the-week">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var project in Model.ProjectsOfTheWeek)
+            {
+              <partial name="_ProjectCard" model="project" />
+            }
+        </div>
+
+    </div>
+</div>
+
